@@ -9,6 +9,7 @@
 
     .titulo{
         font-size: 2rem;
+        padding-bottom: 1vh;
         color: rgb(71, 126, 61);
     }
 
@@ -26,4 +27,8 @@
     }
     a:hover{
         font-weight: 500;
+    }
+
+    .Contenedor-Carrito img{
+        height: 60px;
     }
