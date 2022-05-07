@@ -1,0 +1,37 @@
+.contenedor-count{
+    margin: 5vh auto;
+    text-align: center;
+    height: 42vh;
+    width: 20vw;
+    background-color: rgb(135, 245, 115);
+}
+
+.contenedor-count img {
+    height: 25vh;
+    margin-top: 2vh;
+}
+
+.stock-disponible{
+    color: rgb(71, 126, 61);
+}
+
+.contador button{
+    margin: 1vw 2vw;
+    padding: 0 1vw;
+    background-color: transparent;
+    border: 1px solid rgb(103, 185, 88);
+}
+.contador button:hover{
+    background-color: rgb(103, 185, 88);
+    cursor: pointer;
+}
+
+.btn-agregar{
+    background-color: transparent;
+    border: 1px solid rgb(103, 185, 88);
+    padding: 1vh 2vw;
+}
+.btn-agregar:hover{
+    background-color: rgb(103, 185, 88);
+    cursor: pointer;
+}
