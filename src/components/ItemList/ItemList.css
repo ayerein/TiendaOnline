@@ -1,0 +1,10 @@
+.contenedor-itemlist{
+    text-align: center;
+}
+    .contenedor-itemlist .img-loading{
+        height: 25vh;
+    }
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

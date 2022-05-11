@@ -1,6 +1,6 @@
 .Contenedor-nav{
     height: 15vh;
-    background-color: rgb(135, 245, 115);
+    background-color: #e2be99;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +10,7 @@
     .titulo{
         font-size: 2rem;
         padding-bottom: 1vh;
-        color: rgb(71, 126, 61);
+        color: #49280c;
     }
 
     ul{
@@ -22,7 +22,7 @@
     }
     a{
         text-decoration: none;
-        color: rgb(71, 126, 61);
+        color: #6d3c11;
                
     }
     a:hover{

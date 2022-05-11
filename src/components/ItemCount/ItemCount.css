@@ -1,9 +1,5 @@
 .contenedor-count{
-    margin: 5vh auto;
-    text-align: center;
-    height: 42vh;
-    width: 20vw;
-    background-color: rgb(135, 245, 115);
+    margin: 0 auto;
 }
 
 .contenedor-count img {
@@ -12,26 +8,30 @@
 }
 
 .stock-disponible{
-    color: rgb(71, 126, 61);
+    color: #6d3c11;
 }
 
 .contador button{
     margin: 1vw 2vw;
     padding: 0 1vw;
     background-color: transparent;
-    border: 1px solid rgb(103, 185, 88);
+    border: 1px solid #b5936f;
+    border-radius: 3px;
+    color: #6d3c11;
 }
-.contador button:hover{
-    background-color: rgb(103, 185, 88);
-    cursor: pointer;
-}
+    .contador button:hover{
+        background-color: #ebcaa8;
+        cursor: pointer;
+    }
 
 .btn-agregar{
     background-color: transparent;
-    border: 1px solid rgb(103, 185, 88);
+    border: 1px solid #b5936f;
+    border-radius: 3px;
     padding: 1vh 2vw;
+    color: #6d3c11;
 }
-.btn-agregar:hover{
-    background-color: rgb(103, 185, 88);
-    cursor: pointer;
-}
+    .btn-agregar:hover{
+        background-color: #ebcaa8;
+        cursor: pointer;
+    }
