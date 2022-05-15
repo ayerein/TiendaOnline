@@ -4,12 +4,12 @@ import './ItemCount.css';
 
 
 
-const ItemCount = () => {
+const ItemCount = ({stock}) => {
     let [count, setCount] = useState(1)
-    let [stock, setStock] = useState(5)
+    let [stockActual, setStock] = useState(stock)
 
     function sumar () {
-        if (count < stock){
+        if (count < stockActual){
             setCount(count +1)
         }
     }
@@ -21,20 +21,21 @@ const ItemCount = () => {
     }
 
     function agregar () {
-        if (stock > 0){
-            setStock(stock - count)
+        if (stockActual > 0){
+            setStock(stockActual - count)
             alert(`Agregaste ${count} productos al carrito`)
             setCount(count = 1)
         } else{
             alert('No hay mas stock')
         }
     }
+    
 
     return(
 
         <div className="contenedor-count">
             <div className="contador">
-                <p>Stock: {stock}</p>
+                <p>Stock: {stockActual}</p>
                 <button onClick={restar}>-</button>
                     {count}
                 <button onClick={sumar}>+</button>
