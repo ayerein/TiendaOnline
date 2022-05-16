@@ -1,0 +1,27 @@
+.contenedor-detalles{
+    height: 75vh;
+    margin: 5vh 5vw;
+    background-color: #fbf1e9;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contenedor-detalles img{
+    height: 75vh;
+    width: 40vw;
+}
+
+.contenedor-derecha{
+    margin: auto;
+    text-align: center;
+}
+.titulo-detalle{
+    font-size: 2rem;
+}
+
+.contenedor-derecha p{
+    color: #49280c;
+    padding-bottom: 1vh;
+}
+
+

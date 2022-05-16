@@ -2,20 +2,21 @@ import Item from "../Item/Item"
 import './ItemList.css'
 
 
-const ItemList = ({products}) => {
+const ItemList = ({producto}) => {
     return (
               <div className="contenedor-productos">
                 {   
-                    products.map((product) => {
+                    producto.map((prod) => {
                         
                         return (
-                            <div key={product.id}>
-                        <Item
-                          img={product.img}
-                          nombre={product.nombre}
-                          precio={product.precio}
-                          id={product.id}
-                          stock={product.stock}
+                            <div key={prod.id}>
+                        <Item 
+                          img={prod.img}
+                          nombre={prod.nombre}
+                          descripcion={prod.descripcion}
+                          precio={prod.precio}
+                          id={prod.id}
+                          stock={prod.stock}
                           />
                             </div>
                         );

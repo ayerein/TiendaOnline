@@ -1,36 +1,23 @@
 import ItemList from '../ItemList/ItemList';
 import { useEffect, useState } from "react"
-import {productos} from '../../data/data'
+import { getFetch } from '../../helpers/getFetch';
 
 const ItemListContainer = () => {
-    const [products, setProducts] = useState([])
-
-    const getProductsFromDB = async () => {
-        try{
-            const result = await getFetch;
-            setProducts(result);
-        } catch (error){
-            console.log(error)
-        }
-    }
+    const [producto, setProducto] = useState([])
 
     useEffect(() => {
-        getProductsFromDB()
-    }, )
-
-    const getFetch = new Promise((resolve) => {
-        setTimeout(() => {
-            resolve( productos )
-        }, 2000)
-    })
+        getFetch()
+        .then(respuesta => setProducto(respuesta))
+        .catch((err) => console.log(err))
+    }, [])
 
 
     
     return(
         <div className="contenedor-itemlist">
           {
-            products.length ? (
-        <ItemList products={products}/>
+            producto.length ? (
+        <ItemList producto={producto}/>
         ) : (
             <img className="img-loading" src="https://icon-library.com/images/loading-icon-gif/loading-icon-gif-10.jpg" alt="cargando" />
           )
