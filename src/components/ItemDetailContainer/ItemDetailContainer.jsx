@@ -3,19 +3,23 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { getFetch } from '../../helpers/getFetch'
 import { useState, useEffect } from 'react'
 import './ItemDetailContainer.css'
+import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({})
     const [loading, setLoading] = useState(false)
 
+    const { id } = useParams()
+
     useEffect(() => {
-        getFetch('1')
+        getFetch(id)
         .then(respuesta => setProducto(respuesta))
         .catch((err) => console.log(err))
         .finally(()=> setLoading(true))
-    }, [])
+    }, [id])
 
     
+
     return(
         <div>
             {

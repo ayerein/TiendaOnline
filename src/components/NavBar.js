@@ -12,17 +12,17 @@ function NavBar(){
       </div> 
       <div className="Contenedor-menu">
         <ul>
-          <Link to="/int">
+          <Link to="/categoria/interior">
             <p>Plantas interior</p>
           </Link>
-          <Link to="/ext">
-          <p>Plantas exterior</p>
+          <Link to="/categoria/exterior">
+            <p>Plantas exterior</p>
           </Link>
-          <Link to="/sus">
-          <p>Sustratos</p>
+          <Link to="/categoria/sustratos">
+            <p>Sustratos</p>
           </Link>
-          <Link to="/contactanos">
-          <p>Contactanos</p>
+          <Link to="/categoria/contactanos">
+            <p>Contactanos</p>
           </Link>
           </ul>
       </div>

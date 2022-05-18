@@ -84,8 +84,8 @@ export const productos = [
 export const getFetch = (id) => {
     return new Promise((resolve)=>{
         setTimeout(()=>{
-            const products = id ? productos.find(producto => producto.id === id) : productos
-            resolve (products)
+            const prod = id ? productos.find(producto => producto.id === id) : productos
+            resolve (prod)
         }, 2000)
     })
 }
