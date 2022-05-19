@@ -78,7 +78,26 @@ export const productos = [
     precio: 1500 , 
     img: 'https://www.elmueble.com/medio/2020/05/26/macetas-blancas-con-claveles-rosas-y-lilas_7fd53382_917x1280.jpg',
     descripcion: 'Los claveles llenan los balcones, las terrazas y los jardines de alegría y de color. Aguantan el sol directo del verano'},
+
+    {id: '11', 
+    stock: 15, 
+    categoria: 'sustratos', 
+    nombre:'Sustrato exterior', 
+    precio: 2500 , 
+    img: 'https://vod-hogarmania.atresmedia.com/hogarmania/images/images01/2020/10/29/5f9a9130b966010001e18424/1239x697.jpg',
+    descripcion: 'Sustrato especial para plantas de exterior, cumple un rol muy importante en el crecimiento de tus plantas'},
+
+    {id: '12', 
+    stock: 17, 
+    categoria: 'sustratos', 
+    nombre:'Sustrato interior', 
+    precio: 2300 , 
+    img: 'https://i.pinimg.com/564x/f8/3b/35/f83b3582983fb5e0514c24101c4bdc0a.jpg',
+    descripcion: 'Sustrato ideal para plantas de interior, posee un buen drenaje que impide el encharcamiento.'},
 ]
+
+
+
 
 
 export const getFetch = (id) => {

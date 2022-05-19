@@ -1,5 +1,5 @@
 
-import ItemDetail from '../ItemDetail/ItemDetail'
+import ItemDetail from '../../components/ItemDetail/ItemDetail'
 import { getFetch } from '../../helpers/getFetch'
 import { useState, useEffect } from 'react'
 import './ItemDetailContainer.css'

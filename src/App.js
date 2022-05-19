@@ -1,8 +1,9 @@
 import './App.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './contenedor/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './contenedor/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import ContenedorCarrito from './contenedor/ContenedorCarrito/ContenedorCarrito';
 
  
 
@@ -16,6 +17,8 @@ function App() {
           <Route path="/categoria/:categoria" element={<ItemListContainer />} />
 
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
+
+          <Route path="/carrito" element={<ContenedorCarrito />} />
 
 
           <Route path="/*" element={ <Navigate to="/" />} />
