@@ -1,0 +1,12 @@
+.btn-input{
+    background-color: transparent;
+    border: 1px solid #b5936f;
+    border-radius: 3px;
+    padding: 1vh 2vw;
+    color: #6d3c11;
+}
+
+.btn-input:hover{
+    background-color: #ebcaa8;
+        cursor: pointer;
+}

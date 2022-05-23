@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './ItemCount.css';
+import InputCount from '../InputCount/InputCount'
 
 
 
@@ -7,6 +8,7 @@ import './ItemCount.css';
 const ItemCount = ({stock}) => {
     let [count, setCount] = useState(1)
     let [stockActual, setStock] = useState(stock)
+    const [ inputType, setInputType] = useState('button')
 
     function sumar () {
         if (count < stockActual){
@@ -23,6 +25,7 @@ const ItemCount = ({stock}) => {
     function agregar () {
         if (stockActual > 0){
             setStock(stockActual - count)
+            setInputType('ínput')
             alert(`Agregaste ${count} productos al carrito`)
             setCount(count = 1)
         } else{
@@ -32,6 +35,7 @@ const ItemCount = ({stock}) => {
     
 
     return(
+        inputType === 'button' ?
 
         <div className="contenedor-count">
             <div className="contador">
@@ -44,6 +48,8 @@ const ItemCount = ({stock}) => {
             <button className="btn-agregar" onClick={agregar}>Agregar al carrito</button>
         </div>
 
+        :
+        <InputCount />
     )
 }
 
