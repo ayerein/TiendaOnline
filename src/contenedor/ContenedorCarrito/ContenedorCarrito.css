@@ -1,0 +1,51 @@
+.contenedor-carrito{
+    /* height: 75vh; */
+    margin: 5vh;
+    background-color: #fbf1e9;
+}
+
+.carrito-vacio{
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    .carrito-vacio h3{
+        padding-bottom: 3vh;
+        color: #6d3c11;
+    }
+
+.contenedor-carrito-elementos{
+    padding: 2vh 15vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .contenedor-carrito-ind{
+        display: flex;
+        align-items: center;
+        
+    }
+        .contenedor-carrito-ind p{
+            width: 13vw;
+            padding: 0 2vw;
+            color: #6d3c11;
+        }
+
+        .contenedor-carrito-ind img{
+            height: 10vh;
+            width: 10vw;
+            padding-right: 4vw;
+        }
+
+
+.contenedor-carrito-finalizar{
+    text-align: center;
+    padding: 5vh;
+}
+    .contenedor-carrito-finalizar p{
+        padding-bottom: 2vh;
+        color: #6d3c11;
+    }

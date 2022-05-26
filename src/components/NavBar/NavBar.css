@@ -25,6 +25,10 @@
         font-weight: 500;
     }
 
+    .Contenedor-Carrito{
+        display: flex;
+        align-items: center;
+    }
     .Contenedor-Carrito img{
-        height: 60px;
+        height: 50px;
     }
