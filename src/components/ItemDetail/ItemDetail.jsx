@@ -9,7 +9,7 @@ const ItemDetail = ( { producto } ) => {
     let [count, setCount] = useState(1)
     let [stockActual, setStock] = useState(producto.stock)
     const [ inputType, setInputType] = useState('button')   
-    const {addToCart, cartList} = useCartContext()
+    const {addToCart} = useCartContext()
 
     function sumar () {
         if (count < stockActual) {setCount(count +1)}

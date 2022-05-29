@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const ContenedorCarrito = () => {
 
-    const { cartList, vaciarCarrito, precioTotal, removerItem } = useCartContext()
+    const { cartList, vaciarCarrito, precioTotal, removerItem, sumarCant, restarCant } = useCartContext()
     
     return(
         <div className="contenedor-carrito">
@@ -13,7 +13,11 @@ const ContenedorCarrito = () => {
                                                 <img src={producto.img} alt=""/>
                                                 <p>{producto.nombre}</p>
                                                 <p>Precio: ${producto.precio}</p> 
-                                                <p>Cantidad: {producto.count}</p>
+                                                <div className="contenedor-cantidad">
+                                                <button className='btn-cantidad' onClick={ () => restarCant(producto)}>-</button>
+                                                <p>{producto.count}</p>
+                                                <button className='btn-cantidad' onClick={ () => sumarCant(producto)}>+</button>
+                                                </div> 
                                                 </div>
                                             <button className='btn-input' onClick={ () => removerItem(producto.id)}>Eliminar</button>
                                         </div>

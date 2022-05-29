@@ -27,6 +27,7 @@
         display: flex;
         align-items: center;
         
+        
     }
         .contenedor-carrito-ind p{
             width: 13vw;
@@ -38,6 +39,29 @@
             height: 10vh;
             width: 10vw;
             padding-right: 4vw;
+        }
+
+        .contenedor-carrito-ind .contenedor-cantidad{
+            display: flex;
+        }
+
+        .contenedor-carrito-ind .contenedor-cantidad p{
+            padding: 0px;
+            width: 1.5vw;
+            text-align: center;
+            margin: 0 1vw;
+        }
+
+        .contenedor-carrito-ind .btn-cantidad{
+            background-color: transparent;
+            border: 1px solid #b5936f;
+            border-radius: 30px;
+            padding: 0 1vh;
+            color: #6d3c11;
+        }
+        .contenedor-carrito-ind .btn-cantidad:hover{
+            background-color: #ebcaa8;
+            cursor: pointer;
         }
 
 
