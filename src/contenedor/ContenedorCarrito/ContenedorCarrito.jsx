@@ -1,11 +1,37 @@
 import './ContenedorCarrito.css'
 import { useCartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
+import { getFirestore, collection, addDoc, queryCollection } from 'firebase/firestore'
+
 
 const ContenedorCarrito = () => {
 
     const { cartList, vaciarCarrito, precioTotal, removerItem, sumarCant, restarCant } = useCartContext()
     
+    
+    function generarOrden () {
+        let orden = {}
+
+        orden.buyer = { nombre: 'Maria', email: 'maria@gmail.com', telefono:'02455888'}
+        orden.total = precioTotal()
+
+        orden.items = cartList.map(cartItem => {
+            const id = cartItem.id
+            const nombre = cartItem.nombre
+            const precio = cartItem.precio * cartItem.count
+            const cantidad = cartItem.cantidad
+
+            return {id, precio, nombre, cantidad}
+        })
+        const db = getFirestore()
+        const queryCollection = collection(db, 'ordenes')
+        addDoc(queryCollection, orden)
+        .then(resp => console.log(resp))
+        .catch(err => console.log(err))
+        .finally(() => vaciarCarrito())
+    }
+
+
     return(
         <div className="contenedor-carrito">
             {cartList.map(producto =>   <div className='contenedor-carrito-elementos' key={producto.id}>
@@ -39,6 +65,7 @@ const ContenedorCarrito = () => {
                     <div className='contenedor-carrito-finalizar'>
                         <p>Precio total: ${precioTotal()}</p>
                         <button className='btn-input' onClick={vaciarCarrito}>Vaciar Carrito</button> 
+                        <button className='btn-input' onClick={generarOrden}>Finalizar Compra</button> 
                     </div>
                 }
             </div>

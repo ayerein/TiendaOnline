@@ -21,7 +21,6 @@ const ItemDetailContainer = () => {
         .finally(()=> setLoading(true))
       }, [id])
 
-    console.log(producto)
 
     return(
         <div>
