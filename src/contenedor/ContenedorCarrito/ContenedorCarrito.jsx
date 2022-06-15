@@ -1,7 +1,7 @@
 import './ContenedorCarrito.css'
 import { useCartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
-import { getFirestore, collection, addDoc, queryCollection } from 'firebase/firestore'
+import { getFirestore, collection, addDoc } from 'firebase/firestore'
 
 
 const ContenedorCarrito = () => {
@@ -19,7 +19,7 @@ const ContenedorCarrito = () => {
             const id = cartItem.id
             const nombre = cartItem.nombre
             const precio = cartItem.precio * cartItem.count
-            const cantidad = cartItem.cantidad
+            const cantidad = cartItem.count
 
             return {id, precio, nombre, cantidad}
         })
@@ -40,11 +40,11 @@ const ContenedorCarrito = () => {
                                                 <p>{producto.nombre}</p>
                                                 <p>Precio: ${producto.precio}</p> 
                                                 <div className="contenedor-cantidad">
-                                                <button className='btn-cantidad' onClick={ () => restarCant(producto)}>-</button>
-                                                <p>{producto.count}</p>
-                                                <button className='btn-cantidad' onClick={ () => sumarCant(producto)}>+</button>
+                                                    <button className='btn-cantidad' onClick={ () => restarCant(producto)}>-</button>
+                                                    <p>{producto.count}</p>
+                                                    <button className='btn-cantidad' onClick={ () => sumarCant(producto)}>+</button>
                                                 </div> 
-                                                </div>
+                                            </div>
                                             <button className='btn-input' onClick={ () => removerItem(producto.id)}>Eliminar</button>
                                         </div>
                         )}
@@ -52,21 +52,26 @@ const ContenedorCarrito = () => {
 
             <div>
                 {
-                    cartList.length === 0 ?
-                        <div className='carrito-vacio'>
-                            <h3>Tu carrito esta vacio</h3>
-                            <Link to='/'>
-                                <button className="btn-input" >
-                                    Ir a comprar
-                                </button>
+                    
+                        cartList.length === 0 ?
+                            <div className='carrito-vacio'>
+                                <h3>Tu carrito esta vacio</h3>
+                                <Link to='/'>
+                                    <button className="btn-input" >
+                                        Ir a comprar
+                                    </button>
+                                </Link>
+                            </div>  
+                        :
+                        <div className='contenedor-carrito-finalizar'>
+                            <p>Precio total: ${precioTotal()}</p>
+                            <button className='btn-input' onClick={vaciarCarrito}>Vaciar Carrito</button> 
+                            <Link to='/finalizarCompra'>
+                            <button className='btn-input' onClick={generarOrden}>Finalizar Compra</button> 
                             </Link>
-                        </div>  
-                    :
-                    <div className='contenedor-carrito-finalizar'>
-                        <p>Precio total: ${precioTotal()}</p>
-                        <button className='btn-input' onClick={vaciarCarrito}>Vaciar Carrito</button> 
-                        <button className='btn-input' onClick={generarOrden}>Finalizar Compra</button> 
-                    </div>
+                            
+                            
+                        </div>   
                 }
             </div>
             
