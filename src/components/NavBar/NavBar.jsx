@@ -1,18 +1,21 @@
-import './NavBar.css';
-import Carrito from '../Carrito/Carrito';
 import { Link } from 'react-router-dom'
-import { useCartContext } from '../../context/CartContext';
+
+import Carrito from '../Carrito/Carrito';
+import { UsarContexto } from '../../contexto/Contexto';
+
+import './NavBar.css';
+
 
 function NavBar(){
-  const { cantidadTotal } = useCartContext()
+  const { cantidadTotal } = UsarContexto()
   return(
-    <nav className="Contenedor-nav">
-      <div className="Titulo-vivero">
+    <nav className="contenedor-nav">
+      <div className="titulo-vivero">
         <Link to="/">
           <p className="titulo">Vivero</p> 
         </Link>
       </div> 
-      <div className="Contenedor-menu">
+      <div className="contenedor-menu">
         <ul>
           <Link to="/categoria/interior">
             <p>Plantas interior</p>
@@ -25,7 +28,7 @@ function NavBar(){
           </Link>
           </ul>
       </div>
-      <div className="Contenedor-Carrito">
+      <div className="contenedor-carrito-nav">
         {cantidadTotal() !==0 && cantidadTotal()}
         <Carrito />
       </div>

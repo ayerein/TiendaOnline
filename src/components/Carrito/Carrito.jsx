@@ -1,7 +1,8 @@
-import Img from '../carrito.png'
 import { Link } from 'react-router-dom'
 
-const CartWidget = () => {
+import Img from '../carrito.png'
+
+const Carrito = () => {
     return(
         <>
         <Link to="/carrito">    
@@ -11,4 +12,4 @@ const CartWidget = () => {
     )
 }
 
-export default CartWidget
+export default Carrito

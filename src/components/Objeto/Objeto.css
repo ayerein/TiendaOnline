@@ -1,4 +1,4 @@
-.contenedor-item{
+.contenedor-objeto{
     height: 60vh;
     width: 22vw;
     background-color: #fbf1e9;
@@ -6,38 +6,38 @@
     margin: 5vh auto;
     border-radius: 3px;
 }
-.contenedor-item:hover{
+.contenedor-objeto:hover{
     background-color: #f8a05843;
     border: 2px solid #f8a05843;
     transition: all 500ms ease-out;
     cursor: pointer;
 }
 
-.item .descripcion{
+.objeto .descripcion{
     font-size: 1rem;
 }
-.contenedor-item:hover > .item img{
+.contenedor-objeto:hover > .item img{
     height: 18vw;
     transition: all 500ms ease-out;
 }
-.contenedor-item:hover > .item .titulo-item{
+.contenedor-objeto:hover > .item .titulo-objeto{
     padding-top: 2vh;
     transition: all 500ms ease-out;
 }
 
 
 
-    .item img{
+    .objeto img{
         height: 18vw;
         width: 13vw;
         margin-top: 3vh;
         border-radius: 3px;
     }
-    .item p{
+    .objeto p{
         padding: 0.5vh 0.5vh 0 0.5vh;
         font-size: 1.5rem;
         color: #6d3c11;
     }
-    .titulo-item{
+    .titulo-objeto{
         font-size: 1.3rem;
     }

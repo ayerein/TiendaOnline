@@ -1,4 +1,4 @@
-.Contenedor-nav{
+.contenedor-nav{
     height: 15vh;
     background-color: #e2be99;
     display: flex;
@@ -25,10 +25,10 @@
         font-weight: 500;
     }
 
-    .Contenedor-Carrito{
+    .contenedor-carrito-nav{
         display: flex;
         align-items: center;
     }
-    .Contenedor-Carrito img{
+    .contenedor-carrito-nav img{
         height: 50px;
     }

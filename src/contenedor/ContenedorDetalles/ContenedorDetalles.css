@@ -1,9 +1,9 @@
-.contenedor-loading{
+.contenedor-cargando{
     height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.img-loading{
+.img-cargando{
     height: 25vh;
 }

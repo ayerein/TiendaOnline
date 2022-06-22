@@ -1,8 +1,8 @@
-.contenedor-count{
+.contenedor-contador-objeto{
     margin: 0 auto;
 }
 
-.contenedor-count img {
+.contenedor-contador-objeto img {
     height: 25vh;
     margin-top: 2vh;
 }

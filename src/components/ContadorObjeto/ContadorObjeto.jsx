@@ -1,16 +1,13 @@
+import './ContadorObjeto.css';
 
-import './ItemCount.css';
-
-
-const ItemCount = ({stockActual, count, restar, sumar, agregar}) => {
-
+const ContadorObjeto = ({stockActual, contador, restar, sumar, agregar}) => {
 
     return(
-        <div className="contenedor-count">
+        <div className="contenedor-contador-objeto">
             <div className="contador">
                 <p>Stock: {stockActual}</p>
                 <button onClick={restar}>-</button>
-                    {count}
+                    {contador}
                 <button onClick={sumar}>+</button>
             </div>
             
@@ -19,4 +16,4 @@ const ItemCount = ({stockActual, count, restar, sumar, agregar}) => {
     )
 }
 
-export default ItemCount
+export default ContadorObjeto

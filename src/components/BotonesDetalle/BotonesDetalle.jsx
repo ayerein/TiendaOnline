@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import './InputCount.css'
 
+import './BotonesDetalle.css'
 
-const InputCount = () => {
+const BotonesDetalle = () => {
     return(
         <>
         <Link to='/carrito'>
@@ -19,4 +19,4 @@ const InputCount = () => {
     )
 }
 
-export default InputCount
+export default BotonesDetalle

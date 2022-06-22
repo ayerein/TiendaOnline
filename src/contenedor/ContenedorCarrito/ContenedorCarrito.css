@@ -63,7 +63,12 @@
             background-color: #ebcaa8;
             cursor: pointer;
         }
-
+    .contenedor-botones-carrito{
+        text-align: center;
+    }
+    .contenedor-botones-carrito button{
+        margin: 2vh 1vw;
+    }
 
 .contenedor-carrito-finalizar{
     text-align: center;
@@ -73,3 +78,24 @@
         padding-bottom: 2vh;
         color: #6d3c11;
     }
+
+
+
+
+.formulario{
+    margin: 3vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario h3{
+    color: #6d3c11;
+}
+.formulario input {
+    margin: 2vh;
+    text-align: center;
+    width: 35vw;
+    background-color: transparent;
+    border: 1px solid #b5936f;
+    padding: 1.5vh;
+}
