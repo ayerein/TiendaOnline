@@ -27,6 +27,8 @@ const ProveedorContexto = ({children}) => {
             cambioListaCarrito([ ...listaCarrito])
         }
     }
+    
+
 
     const vaciarCarrito = () => {
         cambioListaCarrito([])

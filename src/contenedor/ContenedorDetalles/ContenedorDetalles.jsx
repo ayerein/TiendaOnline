@@ -26,7 +26,7 @@ const ContenedorDetalles = () => {
         <div>
             { carga ? ( <DetalleObjeto producto={producto}/> ) : (
                 <div className='contenedor-cargando'>
-                    <img className="img-cargando" src="https://icon-library.com/images/loading-icon-gif/loading-icon-gif-10.jpg" alt="cargando" />
+                    <img className="img-cargando" src="https://cdn.dribbble.com/users/619790/screenshots/2308625/media/107daa959aa7a5e737ae6d97a712b866.gif" alt="cargando" />
                 </div>
             )}
         </div>
